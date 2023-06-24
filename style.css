@@ -1,0 +1,122 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, sans-serif;
+  box-sizing: border-box;
+}
+/* height */
+::-webkit-scrollbar {
+  height: 5px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  background: #636363; 
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #22252D; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #FFF; 
+}
+html{
+  scroll-behavior: smooth;
+}
+.app{
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.calculator{
+  background-color: #22252D;
+  width: 100%;
+  max-width: 375px;
+  min-height: 640px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  overflow: hidden;
+}
+.display{
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  min-height: 200px;
+  padding: 1.5rem;
+  color: #fff;
+  text-align: right;
+  overflow: hidden;
+}
+.display .content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: end;
+}
+.display .input{
+  background-color: #22252D;
+  color: white;
+  border: 0;
+  outline: 0;
+  text-align: right;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+.display .output{
+  font-size: 3rem;
+  font-weight: 700;
+  width: 100%;
+  overflow: auto;
+}
+.display .operator{
+color: #eb6666;
+}
+
+.keys{
+  overflow: hidden;
+  background-color: #292D36;
+  padding: 1.5rem;
+  border-radius: 1.5rem 1.5rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  gap: 1rem;
+  box-shadow: 0px -2px 16px #00000033;
+}
+.keys .key{
+  position: relative;
+  cursor: pointer;
+  display: block;
+  height: 0;
+  padding-top: 100%;
+  background-color: #262933;
+  border-radius: 1rem;
+  user-select: none;
+  transition: .2s;
+}
+.keys .key:hover{
+  background-color: #444549;
+  box-shadow: inset 0 0 8px #00000033;
+}
+.keys .key span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+}
+.keys .key.operator span{
+  color: #ff9800;
+}
+.keys .key.action span{
+ color: #00ffd1;
+}
