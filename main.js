@@ -2,13 +2,15 @@
 const keys = document.querySelectorAll('.key')
 const display_input = document.querySelector('.display .input')
 const display_output = document.querySelector('.display .output')
-
+const audio = new Audio()
+audio.src = './sound/mixkit-modern-click-box-check-1120.wav'
 // Fonctions
 
 let input = '';
 for (const key of keys) {
   const value = key.dataset.key;
-  key.addEventListener('click', () => {
+  key.addEventListener('click', (e) => {
+    audio.play()
     if (value == 'clear') {
       input = '';
       display_input.value = input
