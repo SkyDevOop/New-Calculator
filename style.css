@@ -11,11 +11,13 @@
 /* Track */
 ::-webkit-scrollbar-track {
   background: #636363; 
+  
 }
  
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: #22252D; 
+  background: #eb6666;
+ 
 }
 
 /* Handle on hover */
@@ -68,21 +70,23 @@ html{
 .display .input{
   background-color: #22252D;
   color: white;
-  border: 0;
-  outline: 0;
-  text-align: right;
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
   width: 100%;
+  overflow: auto;
+}
+.display .operator {
+	color: #EB6666;
+}
+.display .brackets,
+.display .percent {
+	color: #26FED7;
 }
 .display .output{
   font-size: 3rem;
   font-weight: 700;
   width: 100%;
   overflow: auto;
-}
-.display .operator{
-color: #eb6666;
 }
 
 .keys{
